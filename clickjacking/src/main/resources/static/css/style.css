@@ -1,0 +1,15 @@
+#claim {
+    color: red;
+    font-size: 2em;
+}
+
+#clickjack {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 220px;
+    height: 60px;
+}

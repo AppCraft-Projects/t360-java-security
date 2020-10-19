@@ -1,0 +1,4 @@
+GET http://localhost:8080/ps/accounts?customerId=foo%27%20or%20%271%27=%271
+Accept: application/json
+
+###

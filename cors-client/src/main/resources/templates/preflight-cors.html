@@ -1,0 +1,30 @@
+<html lang="en">
+<body>
+
+<div>
+    <h1>Preflight CORS Example</h1>
+    <script>
+        const xhr = new XMLHttpRequest();
+        const handler = (event) => {
+            console.log(event);
+            console.log(xhr.response);
+            console.log(xhr.status);
+            console.log(xhr.getAllResponseHeaders());
+        };
+        xhr.open('POST', 'http://localhost:8080/api/preflight-cors');
+        xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
+        xhr.setRequestHeader('Content-Type', 'application/xml');
+        xhr.onreadystatechange = handler;
+        xhr.onabort = handler;
+        xhr.onerror = handler;
+        xhr.onload = handler;
+        xhr.onloadend = handler;
+        xhr.onloadstart = handler;
+        xhr.onprogress = handler;
+        xhr.ontimeout = handler;
+        xhr.send('<person><name>Test</name></person>');
+    </script>
+</div>
+
+</body>
+</html>

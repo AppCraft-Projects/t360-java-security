@@ -1,0 +1,5 @@
+GET http://localhost:8080/em/accounts?customerId=foo%27%20or%20%271%27%3D%272
+Accept: application/json
+
+###
+

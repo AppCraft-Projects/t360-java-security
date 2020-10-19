@@ -1,0 +1,31 @@
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<body>
+
+<div th:if="${message}">
+    <h2 th:utext="${message}"></h2>
+</div>
+
+<form
+        id="profile-form"
+        method="POST"
+        enctype="multipart/form-data"
+        action="/update-profile"
+>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input name="name"/></td>
+        </tr>
+        <tr>
+            <td>Bank Card Number</td>
+            <td><input name="card"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update"/></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

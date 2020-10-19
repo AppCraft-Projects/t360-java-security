@@ -1,0 +1,29 @@
+<html lang="en">
+<body>
+
+<div>
+    <h1>Simple CORS Example</h1>
+    <script>
+        const xhr = new XMLHttpRequest();
+        const handler = (event) => {
+            console.log(event);
+            console.log(xhr.response);
+            console.log(xhr.status);
+            console.log(xhr.getAllResponseHeaders());
+        };
+        const url = 'http://localhost:8080/api/simple-cors';
+        xhr.open('GET', url);
+        xhr.onreadystatechange = handler;
+        xhr.onabort = handler;
+        xhr.onerror = handler;
+        xhr.onload = handler;
+        xhr.onloadend = handler;
+        xhr.onloadstart = handler;
+        xhr.onprogress = handler;
+        xhr.ontimeout = handler;
+        xhr.send();
+    </script>
+</div>
+
+</body>
+</html>
