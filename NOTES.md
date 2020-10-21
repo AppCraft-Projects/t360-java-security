@@ -73,3 +73,10 @@ public List<AccountDTO> findAccountsByCustomerIdPS(String customerId) throws SQL
         type="submit"
     >Update</button>
     ```
+- In `ReadJavaHome` the solution is:
+  ```java
+  File policy = new File("src/main/resources/home.policy");
+  System.setProperty("java.security.policy", policy.getAbsolutePath());
+  System.setSecurityManager(new SecurityManager());
+  System.out.printf("java.home is : %s%n", System.getProperty("java.home"));
+  ```
